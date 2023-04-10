@@ -1,6 +1,6 @@
+import 'package:bill_track/homepage.dart';
 import 'package:bill_track/signup.dart';
 import 'package:flutter/material.dart';
-import 'package:google_fonts/google_fonts.dart';
 
 class LoginPage extends StatelessWidget {
   const LoginPage({super.key});
@@ -101,7 +101,7 @@ class LoginPage extends StatelessWidget {
                             Navigator.push(
                               context,
                               MaterialPageRoute(
-                                builder: (context) => const Signup(),
+                                builder: (context) => const MyBottomNavigationBar(),
                               ),
                             );
                           },
