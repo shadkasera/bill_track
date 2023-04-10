@@ -1,9 +1,9 @@
-import 'package:bill_track/signup.dart';
+import 'package:bill_track/login.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-class LoginPage extends StatelessWidget {
-  const LoginPage({super.key});
+class Signup extends StatelessWidget {
+  const Signup({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +28,7 @@ class LoginPage extends StatelessWidget {
                       horizontal: 25,
                     ),
                     child: Text(
-                      'Login',
+                      'SIgn Up',
                       style: TextStyle(
                         fontWeight: FontWeight.bold,
                         fontSize: 60,
@@ -50,7 +50,7 @@ class LoginPage extends StatelessWidget {
                         child: TextField(
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            hintText: 'Username',
+                            hintText: 'Email',
                             hintStyle: TextStyle(
                               color: Colors.white,
                               fontSize: 20,
@@ -85,6 +85,32 @@ class LoginPage extends StatelessWidget {
                       ),
                     ),
                   ),
+
+                  //confirm password
+                   Padding(
+                    padding: const EdgeInsets.symmetric(
+                        horizontal: 40, vertical: 20),
+                    child: Container(
+                      decoration: BoxDecoration(
+                        color: Colors.grey[600],
+                        borderRadius: BorderRadius.circular(5),
+                      ),
+                      child: const Padding(
+                        padding: EdgeInsets.only(left: 60),
+                        child: TextField(
+                          obscureText: true,
+                          decoration: InputDecoration(
+                            border: InputBorder.none,
+                            hintText: 'Confirm Password',
+                            hintStyle: TextStyle(
+                              color: Colors.white,
+                              fontSize: 20,
+                            ),
+                          ),
+                        ),
+                      ),
+                    ),
+                  ),
                   //login button
                   Padding(
                     padding: const EdgeInsets.symmetric(
@@ -97,22 +123,14 @@ class LoginPage extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: GestureDetector(
-                          onTap: () {
-                            Navigator.push(
-                              context,
-                              MaterialPageRoute(
-                                builder: (context) => const Signup(),
-                              ),
-                            );
-                          },
+                          onTap: () {},
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: const [
                               Padding(
-                                padding: EdgeInsets.symmetric(
-                                    vertical: 14, horizontal: 100),
+                                padding: EdgeInsets.symmetric(vertical: 14, horizontal: 40),
                                 child: Text(
-                                  'Login',
+                                  'Create account',
                                   style: TextStyle(
                                       fontSize: 20, color: Colors.white),
                                 ),
@@ -154,7 +172,7 @@ class LoginPage extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(
-                            builder: (context) => const Signup(),
+                            builder: (context) => const LoginPage(),
                           ),
                         );
                       },
@@ -163,7 +181,7 @@ class LoginPage extends StatelessWidget {
                         decoration: const BoxDecoration(),
                         child: const Center(
                           child: Text(
-                            'Sign up',
+                            'Log in',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
