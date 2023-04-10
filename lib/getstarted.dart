@@ -12,10 +12,10 @@ class GetStarted extends StatelessWidget {
         decoration:  BoxDecoration(
           image: const DecorationImage(
             image: AssetImage(
-                'assets/images/house.png'), // Replace with your local image path
+                'assets/images/house2.jpg'), // Replace with your local image path
             fit: BoxFit.cover,
           ),
-           color: Colors.black.withOpacity(0.5),
+           color: Colors.black.withOpacity(0.8),
         ),
         child: SafeArea(
           child: Center(
@@ -48,7 +48,7 @@ class GetStarted extends StatelessWidget {
                 ),
                 Padding(
                   padding:
-                      const EdgeInsets.symmetric(horizontal: 25, vertical: 30),
+                      const EdgeInsets.symmetric(horizontal: 25, vertical: 10),
                   child: GestureDetector(
                     onTap: () {
                       Navigator.push(
