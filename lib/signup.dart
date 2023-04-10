@@ -123,7 +123,14 @@ class Signup extends StatelessWidget {
                       child: Padding(
                         padding: const EdgeInsets.only(left: 30, right: 30),
                         child: GestureDetector(
-                          onTap: () {},
+                          onTap: () {
+                            Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const LoginPage(),
+                          ),
+                        );
+                          },
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: const [
