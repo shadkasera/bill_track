@@ -16,12 +16,9 @@ class _LandingScreenState extends State<LandingScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
    Homelanding(),
+    
     Text(
-      'Index 1: Business',
-      style: optionStyle,
-    ),
-    Text(
-      'Index 2: School',
+      'Profile',
       style: optionStyle,
     ),
   ];
@@ -44,17 +41,14 @@ class _LandingScreenState extends State<LandingScreen> {
             icon: Icon(Icons.home),
             label: 'Home',
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
-          ),
+         
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'School',
+            label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: const Color(0xff3786ea),
+        selectedItemColor: Colors.yellow[600],
         onTap: _onItemTapped,
       ),
     );
