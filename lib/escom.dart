@@ -1,4 +1,5 @@
 import 'package:bill_track/homelanding.dart';
+import 'package:bill_track/topup.dart';
 import 'package:flutter/material.dart';
 
 class EscomPage extends StatelessWidget {
@@ -48,12 +49,12 @@ class EscomPage extends StatelessWidget {
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: GestureDetector(
                     onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const LogInPage(),
-                      //   ),
-                      // );
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => const TopUp(),
+                        ),
+                      );
                     },
                     child: Container(
                       padding: const EdgeInsets.all(20),
@@ -75,7 +76,7 @@ class EscomPage extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: 10),
                               child: Text(
-                                'View Balance',
+                                'Top up',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
