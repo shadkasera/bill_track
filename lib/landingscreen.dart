@@ -1,4 +1,6 @@
 import 'package:bill_track/homelanding.dart';
+import 'package:bill_track/login.dart';
+import 'package:bill_track/profile.dart';
 import 'package:flutter/material.dart';
 
 
@@ -16,12 +18,15 @@ class _LandingScreenState extends State<LandingScreen> {
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
    Homelanding(),
+   
+   ProfilePage(),
+   
     
-    Text(
-      'Profile',
-      style: optionStyle,
-    ),
+    
   ];
+  
+  
+  
 
   void _onItemTapped(int index) {
     setState(() {
