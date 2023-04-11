@@ -1,8 +1,8 @@
-import 'package:bill_track/escom.dart';
+import 'package:bill_track/homelanding.dart';
 import 'package:flutter/material.dart';
 
-class Homelanding extends StatelessWidget {
-  const Homelanding({super.key});
+class EscomPage extends StatelessWidget {
+  const EscomPage({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,16 +14,46 @@ class Homelanding extends StatelessWidget {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
+                GestureDetector(onTap: () {
+                   Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                builder: (context) => const Homelanding(),
+                              ),
+                            );
+                },
+                  child: Row(
+                    children: [
+                      Padding(
+                        padding: const EdgeInsets.only(left: 30),
+                        child: Icon(
+                          Icons.arrow_back_ios_new,
+                          color: Colors.yellow[300],
+                        ),
+                      ),
+                      const Text(
+                        'back',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      )
+                    ],
+                  ),
+                ),
+                const SizedBox(
+                  height: 30,
+                ),
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: GestureDetector(
                     onTap: () {
-                      Navigator.push(
-                        context,
-                        MaterialPageRoute(
-                          builder: (context) => const EscomPage(),
-                        ),
-                      );
+                      // Navigator.push(
+                      //   context,
+                      //   MaterialPageRoute(
+                      //     builder: (context) => const LogInPage(),
+                      //   ),
+                      // );
                     },
                     child: Container(
                       padding: const EdgeInsets.all(20),
@@ -45,7 +75,7 @@ class Homelanding extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: 10),
                               child: Text(
-                                'Escom',
+                                'View Balance',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -95,7 +125,7 @@ class Homelanding extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: 10),
                               child: Text(
-                                'WaterBorad',
+                                'Pay Bills',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
@@ -145,7 +175,7 @@ class Homelanding extends StatelessWidget {
                             Padding(
                               padding: EdgeInsets.only(left: 10),
                               child: Text(
-                                'Profile',
+                                'Report Issues',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontWeight: FontWeight.bold,
