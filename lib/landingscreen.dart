@@ -1,16 +1,30 @@
+import 'package:bill_track/homlanding.dart';
 import 'package:flutter/material.dart';
 
-class MyBottomNavigationBar extends StatefulWidget {
-  const MyBottomNavigationBar({super.key});
+
+
+class LandingScreen extends StatefulWidget {
+  const LandingScreen({super.key});
 
   @override
-  _MyBottomNavigationBarState createState() => _MyBottomNavigationBarState();
+  State<LandingScreen> createState() => _LandingScreenState();
 }
 
-class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
+class _LandingScreenState extends State<LandingScreen> {
   int _selectedIndex = 0;
-
-  final List<Widget> _widgetOptions = [    const Text('Item 1'),    const Text('Item 2'),    const Text('Item 3'),  ];
+  static const TextStyle optionStyle =
+      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
+  static const List<Widget> _widgetOptions = <Widget>[
+   HomeLanding(),
+    Text(
+      'Index 1: Business',
+      style: optionStyle,
+    ),
+    Text(
+      'Index 2: School',
+      style: optionStyle,
+    ),
+  ];
 
   void _onItemTapped(int index) {
     setState(() {
@@ -21,9 +35,6 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: const Text('My Bottom Navigation Bar'),
-      ),
       body: Center(
         child: _widgetOptions.elementAt(_selectedIndex),
       ),
@@ -31,19 +42,19 @@ class _MyBottomNavigationBarState extends State<MyBottomNavigationBar> {
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
             icon: Icon(Icons.home),
-            label: 'Item 1',
+            label: 'Home',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.business),
-            label: 'Item 2',
+            label: 'Business',
           ),
           BottomNavigationBarItem(
             icon: Icon(Icons.school),
-            label: 'Item 3',
+            label: 'School',
           ),
         ],
         currentIndex: _selectedIndex,
-        selectedItemColor: Colors.amber[800],
+        selectedItemColor: const Color(0xff3786ea),
         onTap: _onItemTapped,
       ),
     );

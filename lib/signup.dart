@@ -188,7 +188,7 @@ class Signup extends StatelessWidget {
                         decoration: const BoxDecoration(),
                         child: const Center(
                           child: Text(
-                            'Log in',
+                            'Log in instead',
                             style: TextStyle(
                               color: Colors.white,
                               fontWeight: FontWeight.bold,
