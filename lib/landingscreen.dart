@@ -1,5 +1,5 @@
 import 'package:bill_track/homelanding.dart';
-import 'package:bill_track/login.dart';
+
 import 'package:bill_track/profile.dart';
 import 'package:flutter/material.dart';
 
@@ -14,8 +14,6 @@ class LandingScreen extends StatefulWidget {
 
 class _LandingScreenState extends State<LandingScreen> {
   int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-      TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
    Homelanding(),
    
@@ -48,7 +46,7 @@ class _LandingScreenState extends State<LandingScreen> {
           ),
          
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
+            icon: Icon(Icons.person),
             label: 'Profile',
           ),
         ],
