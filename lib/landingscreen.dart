@@ -1,4 +1,4 @@
-import 'package:bill_track/homlanding.dart';
+import 'package:bill_track/homelanding.dart';
 import 'package:flutter/material.dart';
 
 
@@ -15,7 +15,7 @@ class _LandingScreenState extends State<LandingScreen> {
   static const TextStyle optionStyle =
       TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
   static const List<Widget> _widgetOptions = <Widget>[
-   HomeLanding(),
+   Homelanding(),
     Text(
       'Index 1: Business',
       style: optionStyle,

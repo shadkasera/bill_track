@@ -1,4 +1,4 @@
-import 'package:bill_track/homepage.dart';
+import 'package:bill_track/landingscreen.dart';
 import 'package:bill_track/signup.dart';
 import 'package:flutter/material.dart';
 
