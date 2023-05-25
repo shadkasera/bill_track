@@ -67,14 +67,7 @@ class Homelanding extends StatelessWidget {
                 Padding(
                   padding: const EdgeInsets.symmetric(horizontal: 25),
                   child: GestureDetector(
-                    onTap: () {
-                      // Navigator.push(
-                      //   context,
-                      //   MaterialPageRoute(
-                      //     builder: (context) => const LogInPage(),
-                      //   ),
-                      // );
-                    },
+                    onTap: () {},
                     child: Container(
                       padding: const EdgeInsets.all(20),
                       decoration: BoxDecoration(
